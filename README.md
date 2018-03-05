@@ -49,4 +49,12 @@
 
 因此动态规划状态转移方程为：dp[i][j]=max(dp[i][j]，dp[l-1][j-1]*(sum[i]-sum[l-1]])，思路：假设最后一个乘号出现在第l个元素之前，所以问题就转化为了求前l-1个数加j-1个乘号最大的算式值载乘上第l个元素到第i个元素的和，而l-1个元素加j-1个乘号又可以按相同的方法分解为更小的子问题。只要找出一个l使得最后一个乘号出现在这个位置上时的值最大，就可以存入dp[i][j]中。
 
-![Image text](https://github.com/naginoasukara/machinelearninginaction/blob/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98/ch4/image/1.png)
+![Image text](https://github.com/naginoasukara/blue-bridge/blob/master/image/1.png)
+
+一开始写完之后分数是88，因为分数接近100所以觉得可能是大数有一些问题。
+
+题中，有15个数最多，他们如果相乘的结果是明显要超过int的范围，因此改为 
+
+long long sum[20] = {0}, a[20] = {0}, dp[20][20] = {0};
+
+分数从88提升到100
