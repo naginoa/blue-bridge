@@ -102,3 +102,5 @@ dp[i][j] += dp[i-1][x],其中j，表示新加的首位，x表示第二位，以�
 还有一个同余定理。
 
 ![Image text](https://github.com/naginoasukara/blue-bridge/blob/master/image/2.png)
+
+还要要注意的就是蓝桥杯的评测系统并不是很好，例如dp[102][102]是80分，dp[105][105]是90分，dp[125][125]是100分，如果数组是宏定义的话，可以直接dp[102][102]就可以。是个bug！
